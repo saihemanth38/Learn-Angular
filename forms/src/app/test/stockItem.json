@@ -1,0 +1,16 @@
+{
+  "stockItems":[
+    {
+      "id":"1",
+      "item":"Samsung"
+    },
+    {
+      "id":"2",
+      "item":"Nokia"
+    },
+    {
+      "id":"3",
+      "item":"Oppo"
+    }
+  ]
+}

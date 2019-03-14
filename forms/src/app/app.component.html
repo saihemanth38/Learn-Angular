@@ -1,0 +1,23 @@
+<form>
+  <div class= "form-group">
+    <label for= "firstName">First Name : </label>
+    <input required maxlength= "15" minlength="3" pattern= {{name[0]}} ngModel name="firstName"
+    #firstName = "ngModel" (change)= "log(firstName)" placeholder="enter name"
+    class= "form-control ng-invalid ng-dirty ng-touched" type= "text" id ="firstName">
+    <div class="alert alert-danger" role="alert" *ngIf = "firstName.touched && !firstName.valid">
+      <div *ngIf="firstName?.errors.required">required Name</div>
+      <div *ngIf="firstName?.errors.minlength">text must me contain atleast 3 charecters</div>
+      <div *ngIf="firstName?.errors.pattern">text must valid data</div>
+    </div>
+      <label for= "lastName">Last Name : </label>
+      <input required maxlength= "15" minlength="3" pattern= "baba" ngModel name="lastName"
+      #lastName = "ngModel" (change)= "log(lastName)" placeholder="enter name"
+      class= "form-control ng-invalid ng-dirty ng-touched" type= "text" id ="lastName">
+      <div class="alert alert-danger" role="alert" *ngIf = "lastName.touched && !lastName.valid">
+        <div *ngIf="lastName?.errors.required">required Last Name</div>
+        <div *ngIf="lastName?.errors.minlength">text must me contain atleast 3 charecters</div>
+        <div *ngIf="lastName?.errors.pattern">text must valid data</div>
+    </div>
+  </div>
+
+</form>
